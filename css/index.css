@@ -194,16 +194,18 @@ footer nav a {
     text-decoration: none;
 }
 
-/*I had fun going crazy with selectors. 
+/*
+I had fun going crazy with selectors.
+I hope that was the point!
 This is not intended to be professional-quality work.
-I hope that was the point! */
+*/
 
 /*1*/
 .box:first-child {
     background:teal;
 }
 /*2*/
-.box:first-child + .box {
+:first-child + .box {
     background:gold;
 }
 /*3*/
@@ -219,19 +221,19 @@ I hope that was the point! */
     background:crimson;
 }
 /*6*/
-.box[data-box^=b]{
+.box:nth-child(6){
     background:forestgreen;
 }
 /*7*/
-.box[data-box=b]{
+.box[data-box]{
     background:darkorchid;
 }
 /*8*/
-[data-box=b] + .box{
+.box[data-box^=b]{
     background:hotpink;
 }
 /*9*/
-.box:nth-child(9){
+[data-box^=b] + .box{
     background:indigo;
 }
 /*10*/
