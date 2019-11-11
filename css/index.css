@@ -151,7 +151,6 @@ header nav a {
 .middle-content .boxes .box {
     width: 12.5%;
     height: 100px;
-    background: black;
     margin: 20px 2.5%;
     color: white;
     display: flex;
@@ -193,4 +192,50 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+/*I had fun going crazy with selectors. 
+This is not intended to be professional-quality work.
+I hope that was the point! */
+
+/*1*/
+.box:first-child {
+    background:teal;
+}
+/*2*/
+.box:first-child + .box {
+    background:gold;
+}
+/*3*/
+.box3{
+    background:cadetblue;
+}
+/*9*/
+.box3 ~ .box{
+    background:indigo;
+}
+
+/*4*/
+.box3 + .box {
+    background: coral;
+}
+/*5*/
+.box[data-box^=b]{
+    background:crimson;
+}
+/*6*/
+.box[data-box=b]{
+    background:forestgreen;
+}
+/*7*/
+[data-box=b] + .box{
+    background:darkorchid;
+}
+/*8*/
+.box:nth-child(8){
+    background:hotpink;
+}
+/*10*/
+.box:last-child {
+    background:dodgerblue;
 }
