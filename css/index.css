@@ -199,7 +199,6 @@ This is not intended to be professional-quality work.
 I hope that was the point! */
 
 /*1*/
-
 .box:first-child {
     background:teal;
 }
@@ -208,16 +207,16 @@ I hope that was the point! */
     background:gold;
 }
 /*3*/
-.box3{
+.box3 {
     background:cadetblue;
+}
+/*4*/
+.box3 + div.box {
+    background: coral;
 }
 /*5*/
 .box3 ~ .box{
     background:crimson;
-}
-/*4*/
-.box3 + .box {
-    background: coral;
 }
 /*6*/
 .box[data-box^=b]{
