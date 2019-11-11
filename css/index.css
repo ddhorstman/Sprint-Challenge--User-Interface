@@ -70,6 +70,23 @@ p {
     width: 800px;
     margin: 0 auto;
 }
+header nav {
+    margin-top:20px;
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+header nav a {
+    text-decoration: none;
+    color:inherit
+}
+
+.jumbo {
+    padding:30px 0px;
+    width:800px;
+    margin:auto;
+}
+
 
 .top-content {
     display: flex;
