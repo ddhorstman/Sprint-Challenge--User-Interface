@@ -70,6 +70,29 @@ p {
     width: 800px;
     margin: 0 auto;
 }
+header nav {
+    margin-top:20px;
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+header nav a {
+    text-decoration: none;
+    color:inherit
+}
+
+.jumbo {
+    padding:30px 0px;
+    width:800px;
+    margin:auto;
+}
+
+.details {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
 
 .top-content {
     display: flex;
@@ -80,11 +103,35 @@ p {
 }
 
 .top-content .text-container {
-    width: 48%;
     padding: 0 1%;
     padding-bottom: 20px;  
 }
+.half {
+    width:48%;
+}
 
+.about-page.middle-content{
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    /* align-content: center; */
+    text-align: left;
+}
+.about-page.middle-content > * {
+    margin: 5px;
+    padding: 0px;
+}
+.about-page.middle-content img {
+    width:100%;
+}
+.about-page.middle-content > button {
+    width:30%;
+    background-color: inherit;
+    padding:5px;
+    border-color:black;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
 .middle-content {
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
@@ -104,7 +151,6 @@ p {
 .middle-content .boxes .box {
     width: 12.5%;
     height: 100px;
-    background: black;
     margin: 20px 2.5%;
     color: white;
     display: flex;
@@ -117,7 +163,10 @@ p {
     margin: 0 2% 20px;
     justify-content: space-around;
 }
-
+.bottom-content.about-page {
+    padding-top:20px;
+    width:92%;
+}
 .bottom-content .text-container {
     padding-right: 4%;
 }
@@ -143,4 +192,51 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+/*
+I had fun going crazy with selectors.
+I hope that was the point!
+This is not intended to be professional-quality work.
+*/
+
+/*1*/
+.box:first-child {
+    background:teal;
+}
+/*2*/
+:first-child + .box {
+    background:gold;
+}
+/*3*/
+.box3 {
+    background:cadetblue;
+}
+/*4*/
+.box3 + div.box {
+    background: coral;
+}
+/*5*/
+.box3 ~ .box{
+    background:crimson;
+}
+/*6*/
+.box:nth-child(6){
+    background:forestgreen;
+}
+/*7*/
+.box[data-box]{
+    background:darkorchid;
+}
+/*8*/
+.box[data-box^=b]{
+    background:hotpink;
+}
+/*9*/
+[data-box^=b] + .box{
+    background:indigo;
+}
+/*10*/
+.box:last-child {
+    background:dodgerblue;
 }
